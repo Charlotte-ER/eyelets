@@ -5,9 +5,8 @@
 def main():
     opening, position, number = get_user_input()
 
-    # Calculate standard distance between each eyelet
-    standard = round(((opening - (position * 2)) / (number + 0.5)),1)
-
+    standard = calculate_standard_distance(opening, position, number)
+    
     print_instructions(position, number, standard)
     print_diagram(standard, number)
 
@@ -23,6 +22,11 @@ def get_user_input():
     number = int(input("How many cross-laces do you want (excluding top and bottom laces)? "))
 
     return opening, position, number
+
+
+def calculate_standard_distance(opening, position, number):
+    # Calculate standard distance between each eyelet
+    return round(((opening - (position * 2)) / (number + 0.5)),1)
 
 
 def print_instructions(position, number, standard):
