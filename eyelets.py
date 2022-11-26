@@ -8,20 +8,7 @@ def main():
     # Calculate standard distance between each eyelet
     standard = round(((opening - (position * 2)) / (number + 0.5)),1)
 
-    # Output Instructions
-    print("\n---------------------------------------------------------------------------------------------------------")
-    print("INSTRUCTIONS")
-    print("---------------------------------------------------------------------------------------------------------")
-
-    print(f"\nStarting from the top edge of your opening, mark eyelets {position} down from the top, on both sides.")
-    print(f"Starting from the bottom edge of your opening, mark eyelets {position} up from the bottom, on both sides.")
-    print(f"\nOn the LEFT hand side of the opening:")
-    print(f"\tmark an eyelet {standard/2} down from the first eyelet")
-    print(f"\tmark the other {number-1} eyelets, each {standard} down from the eyelet above.")
-    print(f"\nOn the RIGHT hand side of the opening:")
-    print(f"\tmark an eyelet {standard} down from the first eyelet")
-    print(f"\tmark the other {number-1} eyelets, each {standard} down from the eyelet above.")
-    print(f"\tthe gap between the bottom two eyelets on the right should measure {standard/2}.")
+    print_instructions(position, number, standard)
 
     # Output Diagram
     print("\n---------------------------------------------------------------------------------------------------------")
@@ -58,6 +45,23 @@ def get_user_input():
     number = int(input("How many cross-laces do you want (excluding top and bottom laces)? "))
 
     return opening, position, number
+
+
+def print_instructions(position, number, standard):
+    # Output Instructions
+    print("\n---------------------------------------------------------------------------------------------------------")
+    print("INSTRUCTIONS")
+    print("---------------------------------------------------------------------------------------------------------")
+
+    print(f"\nStarting from the top edge of your opening, mark eyelets {position} down from the top, on both sides.")
+    print(f"Starting from the bottom edge of your opening, mark eyelets {position} up from the bottom, on both sides.")
+    print(f"\nOn the LEFT hand side of the opening:")
+    print(f"\tmark an eyelet {standard/2} down from the first eyelet")
+    print(f"\tmark the other {number-1} eyelets, each {standard} down from the eyelet above.")
+    print(f"\nOn the RIGHT hand side of the opening:")
+    print(f"\tmark an eyelet {standard} down from the first eyelet")
+    print(f"\tmark the other {number-1} eyelets, each {standard} down from the eyelet above.")
+    print(f"\tthe gap between the bottom two eyelets on the right should measure {standard/2}.")
 
 
 if __name__ == "__main__":
