@@ -3,15 +3,7 @@
 
 
 def main():
-    # Get length of opening
-    print("\n")
-    opening = round(float(input("How long is your opening? ")),1)
-
-    # Get desired start and end position
-    position = round(float(input("How far down from the top edge do you want your first eyelet to be? ")),1)
-
-    # Get desired number of laces
-    number = int(input("How many cross-laces do you want (excluding top and bottom laces)? "))
+    opening, position, number = get_user_input()
 
     # Calculate standard distance between each eyelet
     standard = round(((opening - (position * 2)) / (number + 0.5)),1)
@@ -53,6 +45,19 @@ def main():
     print(f"\tX\tX")
 
     print("---------------------------------------------------------------------------------------------------------")
+
+
+def get_user_input():
+    # Get length of opening
+    opening = round(float(input("How long is your opening? ")),1)
+
+    # Get desired start and end position
+    position = round(float(input("How far down from the top edge do you want your first eyelet to be? ")),1)
+
+    # Get desired number of laces
+    number = int(input("How many cross-laces do you want (excluding top and bottom laces)? "))
+
+    return opening, position, number
 
 
 if __name__ == "__main__":
