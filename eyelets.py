@@ -9,29 +9,7 @@ def main():
     standard = round(((opening - (position * 2)) / (number + 0.5)),1)
 
     print_instructions(position, number, standard)
-
-    # Output Diagram
-    print("\n---------------------------------------------------------------------------------------------------------")
-    print("DIAGRAM")
-    print("---------------------------------------------------------------------------------------------------------")
-    # First row
-    print('\n')
-    print(f"\tX\tX")
-    print(f"\t{(standard)/2}\t|")
-
-    # Laces
-    for i in range(number):
-        print(f"\tX\t{(standard)}")
-        print(f"\t|\t|")
-        print(f"\t{(standard)}\tX")
-        if i < (number-1):
-            print(f"\t|\t|")
-
-    # Last row
-    print(f"\t|\t{(standard)/2}")
-    print(f"\tX\tX")
-
-    print("---------------------------------------------------------------------------------------------------------")
+    print_diagram(standard, number)
 
 
 def get_user_input():
@@ -62,6 +40,31 @@ def print_instructions(position, number, standard):
     print(f"\tmark an eyelet {standard} down from the first eyelet")
     print(f"\tmark the other {number-1} eyelets, each {standard} down from the eyelet above.")
     print(f"\tthe gap between the bottom two eyelets on the right should measure {standard/2}.")
+
+
+def print_diagram(standard, number):
+    # Output Diagram
+    print("\n---------------------------------------------------------------------------------------------------------")
+    print("DIAGRAM")
+    print("---------------------------------------------------------------------------------------------------------")
+    # First row
+    print('\n')
+    print(f"\tX\tX")
+    print(f"\t{(standard)/2}\t|")
+
+    # Laces
+    for i in range(number):
+        print(f"\tX\t{(standard)}")
+        print(f"\t|\t|")
+        print(f"\t{(standard)}\tX")
+        if i < (number-1):
+            print(f"\t|\t|")
+
+    # Last row
+    print(f"\t|\t{(standard)/2}")
+    print(f"\tX\tX")
+
+    print("---------------------------------------------------------------------------------------------------------")
 
 
 if __name__ == "__main__":
