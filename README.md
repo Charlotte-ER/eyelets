@@ -4,7 +4,7 @@ Calculates measurements for correct placement of eyelets for lacing historic clo
 
 For my mum who makes things.
 
-Credits: Uses original instructions by Jen Thompson: [The Zen of Spiral Lacing](http://www.festiveattyre.com/p/the-zen-of-spiral-lacing.html)
+Credits: Original instructions by Jen Thompson: [The Zen of Spiral Lacing](http://www.festiveattyre.com/p/the-zen-of-spiral-lacing.html)
 
 ## Usage
 
