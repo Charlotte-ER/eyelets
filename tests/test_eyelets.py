@@ -22,4 +22,4 @@ def test_create_instructions():
 
 
 def test_create_diagram():
-    len(create_diagram(1.2, 6)) == 476
+    assert len(create_diagram(1.2, 6)) == 477
