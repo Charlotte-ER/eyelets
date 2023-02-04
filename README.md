@@ -8,15 +8,21 @@ Credits: Original instructions by Jen Thompson: [The Zen of Spiral Lacing](http:
 
 ## Usage
 
-[Clone the project](https://github.com/Charlotte-ER/eyelets.git), then run it as follows:
+Install eyelets using pip, as follows:
 
 ```bash
-python eyelets.py
+pip install eyelets
+```
+
+Run eyelets from your terminal, as follows:
+
+```bash
+eyelets
 ```
 
 The program will ask questions about the opening in the garment, and your preference for the placement of the laces. For each question, type your answers into the terminal and hit enter.
 
-The output consists of written instructions and a diagram.
+The output consists of written instructions and a diagram, printed to your terminal.
 
 ## Contributing
 
