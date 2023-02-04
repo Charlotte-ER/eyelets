@@ -3,18 +3,14 @@
 
 
 def main():
-    opening, position, number = get_user_input()
+    opening = round(float(input('How long is your opening? ')),1)
+    position = round(float(input('How far down from the top edge do you want your first eyelet to be? ')),1)
+    number = int(input('How many cross-laces do you want (excluding top and bottom laces)? '))
+
     standard = calculate_standard_distance_between_eyelets(opening, position, number)
 
     print(create_instructions(opening, position, standard, number))
     print(create_diagram(standard, number))
-
-
-def get_user_input():
-    opening = round(float(input('How long is your opening? ')),1)
-    position = round(float(input('How far down from the top edge do you want your first eyelet to be? ')),1)
-    number = int(input('How many cross-laces do you want (excluding top and bottom laces)? '))
-    return opening, position, number
 
 
 def calculate_standard_distance_between_eyelets(opening, position, number):
